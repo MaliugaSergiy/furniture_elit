@@ -1,0 +1,154 @@
+<!--#insert file="html/-top.html"-->
+
+<section class="bread">
+	<div class="wr">
+		<ol class="breadcrumb">
+			<li><a href="#">Гостинная</a></li>
+			<li class="active">Контакты</li>
+		</ol>
+	</div>
+</section>
+
+<section class="main_contacts">
+	<div class="wr">
+		<ul>
+			<li><a href="#map1" class="jumpToMap"><i class="glyphicon glyphicon-map-marker"></i>Киевская область с.Петропавловская Борщаговка, ул.Львовская 1-А корп.5 оф.1.</a></li>
+			<li><a href="tel:+380509087934"><i class="fa fa-phone" aria-hidden="true"></i>0509087934</a></li>
+			<li><a href="tel:+380989437199"><i class="fa fa-phone" aria-hidden="true"></i>0989437199</a></li>
+			<li><a href="mailto:info@elit.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>info@elit.com</a></li>
+		</ul>
+		<ul>
+			<li><a href="#map2" class="jumpToMap"><i class="glyphicon glyphicon-map-marker"></i>Донецкая область г.Волноваха, ул.1Мая 25-А</a></li>
+			<li><a href="tel:+380509087934"><i class="fa fa-phone" aria-hidden="true"></i>0509087934</a></li>
+			<li><a href="tel:+380989437199"><i class="fa fa-phone" aria-hidden="true"></i>0989437199</a></li>
+			<li><a href="mailto:meblielit@ukr.net "><i class="fa fa-envelope-o" aria-hidden="true"></i>meblielit@ukr.net</a></li>
+		</ul>
+		<ul>
+			<li><a href="#map3" class="jumpToMap"><i class="glyphicon glyphicon-map-marker"></i>Донецкая область г.Угледар, ул. 30 лет победы 15г</a></li>
+			<li><a href="tel:+380509087934"><i class="fa fa-phone" aria-hidden="true"></i>0959352701</a></li>
+			<li><a href="mailto:meblielit@ukr.net "><i class="fa fa-envelope-o" aria-hidden="true"></i>meblielit@ukr.net</a></li>
+		</ul>
+	</div>
+</section>
+<section class="qa_form">
+	<div class="wr">
+		<div class="accordion_form panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<a class="flex_item btn_toogle_form" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Задать вопрос <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+					<div class="flex_item descr">
+						<p>Вы можете задать любой вопрос на тему нашей продукции или работы интеренет магазина.</p>
+						<p>Мы постараемся ответить на него как можно быстрее и подробнее</p>
+					</div>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+					<form class="colll form_calculate_form" id="calculateForm">
+						<div class="form_wrap">
+							<div class="inputs_wrap">
+								<textarea name="" id="" placeholder="Ваш вопрос"></textarea>
+								<div class="inputs_box">
+									<input type="text" id="calculateForm_name" name="calculateForm_name" placeholder="Имя">
+									<input type="tel" id="calculateForm_phone" class="phone" name="calculateForm_phone" placeholder="Телефон">
+									<input type="email" id="calculateForm_email" name="calculateForm_email" placeholder="Email">
+								</div>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value=""><span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>Я согласен(на) на обработку персональных данных</label>
+							</div>
+
+							<a class="btn_toogle_form" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Отправить</a>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="maps">
+	<div id="map1" data-address="с.Петропавловская Борщаговка, ул.Львовская 1-А корп.5 оф.1."></div>
+	<div id="map2" data-address="г.Волноваха, ул.1Мая 25-А"></div>
+	<div id="map3" data-address="Донецкая область г.Угледар, ул. 30 лет победы 15г"></div>
+</section>
+<script src="lib/initMap1.js"></script>
+<!-- <script src="lib/initMap2.js"></script> -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDxT-Qey3-KU9oFDsaFwwRyEHDUNI1JmdY&callback=initMap1"></script>
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDxT-Qey3-KU9oFDsaFwwRyEHDUNI1JmdY&callback=initMap2"></script> -->
+<script>
+	$(document).ready(function() {
+		$('.collapse').on('hide.bs.collapse', function() {
+			$(this).closest(".panel").find(".btn_toogle_form i").css("transform", "rotate(0deg)");
+			$(this).closest(".panel").removeClass("changeBG");
+		});
+		$('.collapse').on('show.bs.collapse', function() {
+			$(this).closest(".panel").find(".btn_toogle_form i").css("transform", "rotate(-180deg)");
+			$(this).closest(".panel").addClass("changeBG");
+		});
+
+	});
+
+</script>
+<script>
+	$(document).ready(function() {
+		
+		$(".jumpToMap").on("click", function(e){
+			
+			var linkHref = $(this).attr("href"),
+				headerHeight = $(".wrapp_main_header").outerHeight();
+			$("html, body").animate({
+				scrollTop: $(linkHref).offset().top - headerHeight + 50
+			}, 1000, "swing")
+			e.preventDefault();
+		})
+		
+	});
+
+</script>
+
+<script src="lib/jquery.mask.js"></script>
+<script>
+	$(".phone").mask('(000) 000-00-00');
+
+</script>
+
+<script src="lib/jquery.validate.min.js"></script>
+<script>
+	//Form VAlidation 
+
+	$(document).ready(function() {
+
+		$("#calculateForm").validate({
+			rules: {
+				calculateForm_name: {
+					required: true
+				},
+				calculateForm_email: {
+					required: true,
+					email: true
+				},
+				calculateForm_phone: {
+					required: true,
+					minlenhth: 10,
+					digits: true
+				}
+			},
+			messages: {
+				calculateForm_name: {
+					required: "Обязательное поле"
+				},
+				calculateForm_email: {
+					required: "Обязательное поле",
+					email: "Введите корректный Email"
+				},
+				calculateForm_phone: {
+					required: "Обязательное поле"
+				}
+			},
+			focusCleanup: true,
+			focusInvalid: false
+		});
+	});
+
+</script>
+<!--#insert file="html/-bottom.html"-->

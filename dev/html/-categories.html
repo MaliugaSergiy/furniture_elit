@@ -1,0 +1,222 @@
+<!--#insert file="html/-top.html"-->
+
+<section class="bread">
+	<div class="wr">
+		<ol class="breadcrumb">
+			<li><a href="#">Гостинная</a></li>
+			<li><a href="#">Кухни</a></li>
+			<li class="active">Классические</li>
+		</ol>
+	</div>
+</section>
+<section class="filter_categories">
+	<div class="wr">
+		<div class="panel-group" id="accordion">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Категории</a>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse">
+					<div class="panel-body">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="sort_switch">
+	<div class="wr">
+		<form action="">
+			<span class="name"> Сортировка по цене: </span>
+			<div class="cont">
+				<input type="radio" id="lowPrice" name="byPrice">
+				<label  for="lowPrice"> от дешевого к дорогому</label>
+				<input type="radio" id="heightPrice" name="byPrice">
+				<label for="heightPrice"> от дорогого к дешевому</label>
+			</div>
+		</form>
+	</div>
+</section>
+<section class="categories">
+	<div class="wr">
+		<div class="aside_block sticky">
+			<ul>
+				<li><a class="hvr-sweep-to-right" href="#">Классические</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Модерн</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Кантри</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Ретро</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Хай-тек</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Скандинавский</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Викторианский</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Футуристический</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Минимализм</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Прованс</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Эклектика</a></li>
+				<li><a class="hvr-sweep-to-right" href="#">Лофт</a></li>
+			</ul>
+		</div>
+		<div class="items_wrap">
+			<a class="caption_link hover_shadow_border  caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-1.jpg)"></div>
+				<span>Siena</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-2.jpg)"></div>
+				<span>Stella</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-3.jpg)"></div>
+				<span>Virginia</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-4.jpg)"></div>
+				<span>Fusion</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-5.jpg)"></div>
+				<span>Naomi</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-6.jpg)"></div>
+				<span>Bianka</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-7.jpg)"></div>
+				<span>Ellada</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-8.jpg)"></div>
+				<span>Orchidea</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-9.jpg)"></div>
+				<span>Arno</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-10.jpg)"></div>
+				<span>Kreola</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-11.jpg)"></div>
+				<span>Shale</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-12.jpg)"></div>
+				<span>Aliona</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-13.jpg)"></div>
+				<span>Boston</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-14.jpg)"></div>
+				<span>Fiesta</span>
+			</a>
+			<a class="caption_link hover_shadow_border caption_over_after" href="#">
+				<div href="#" class="item" style="background-image: url(img/Kitchens-15.jpg)"></div>
+				<span>Frame</span>
+			</a>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(".filter_categories .panel-body").html($(".categories .aside_block").html())
+
+</script>
+
+<section class="descr_categories">
+	<div class="wr">
+		<div class="name"><span class="after_figure">Кухонный стиль</span></div>
+		<p>Проявите фантазию! Мир кухонной моды богат не только классическими моделями. Хотя и для их любителей сегодня найдется немало коллекций, которые цепляют самые глубокие струны души. Добавьте в интерьер кухни ярких акцентов, и вы сами удивитесь, насколько особенной и комфортной она может быть. </p>
+		<p>Так, например, кухня в стиле прованс встретит вас ароматами трав и свежеиспечённой сдобы, воздушными занавесками и пастельными тонами, которые подчеркнут глубину стиля французского кантри. Кухня в классическом стиле позовет отобедать ровно в полдень. Ее строгие формы и натуральность текстур «вне времени» и всегда будут актуальны. </p>
+		<p>Присмотритесь к моделям Naomi, Sorrento, Boston, Virginia, Diamond, Provence, Casablanca, Ellada… Разные, будто кусочки пазлов, они покорят вас уникальным дизайном, качеством и многофункциональностью. Будьте уверены, благодаря разноплановости и широкому модельному ряду кухню своей мечты среди них вы найдете непременно.</p>
+		<p>Согласно исследованиям, на кухне человек в среднем проводит более тринадцати часов в неделю! И это только для того, чтобы приготовить еду. Симбиоз инновационных технологий, современные кухни способны вдохнуть любовь к кулинарии в каждого, даже самого рьяного поклонника ресторанов и кафе. А если прибавить сюда время, проведенное за дружескими беседами и семейными вечерами? Согласитесь, выйдет еще больше. Так почему бы не уделить столь важной и любимой части дома максимум внимания? </p>
+	</div>
+</section>
+<section class="advantage">
+	<div class="wr">
+		<div class="item item1">
+			<div class="descr">Богатый выбор</div>
+		</div>
+		<div class="item item2">
+			<div class="descr">Высокое качество</div>
+		</div>
+		<div class="item item3">
+			<div class="descr">Новые мебельные решения</div>
+		</div>
+		<div class="item item4">
+			<div class="descr">Гибкие цены</div>
+		</div>
+		<div class="item item5">
+			<div class="descr">Высокий уровень сервиса</div>
+		</div>
+		<div class="item item6">
+			<div class="descr">Оперативность поставки и сборки</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<!--#insert file="html/-bottom.html"-->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
